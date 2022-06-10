@@ -1,5 +1,6 @@
 /** Import des modules nécessaires */
 import Axios from './caller.service'
+import store from '../store'
 
 let login = (credentials) => {
     return Axios.post('/auth/login', credentials)

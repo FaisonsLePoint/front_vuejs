@@ -1,12 +1,14 @@
 <template>
     <div class="ad_head">
-        Header Admin
+        Header Admin {{ getMarcel }}
         <button @click="logout()">Logout</button>
     </div>
 </template>
 
 <script>
 import { accountService } from '@/_services'
+import { mapGetters } from 'vuex'
+
 export default {
     name: 'AdminHeader',
     methods:{
@@ -14,6 +16,9 @@ export default {
             accountService.logout()
             this.$router.push('/')
         }
+    },
+    computed:{
+        ...mapGetters(['getMarcel'])
     }
 }
 </script>
