@@ -2,6 +2,15 @@
   <router-view/>
 </template>
 
+<script>
+import NotifBar from '@/components/NotifBar.vue'
+export default {
+  components: {
+    NotifBar
+  }
+}
+</script>
+
 <style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;

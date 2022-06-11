@@ -11,14 +11,14 @@
 
 <script>
 import PublicNav from '@/components/PublicNav.vue'
-import { mapGetters } from "vuex"
+import { mapGetters, mapMutations, mapActions } from "vuex"
 export default {
     name: 'PublicLayout',
     components: {
         PublicNav
     },
     computed:{
-        ...mapGetters(['getMarcel']),        
+        ...mapGetters(['getMarcel', 'getUser']),        
     },
     methods: {
         ...mapMutations(['changeMarcel']),
