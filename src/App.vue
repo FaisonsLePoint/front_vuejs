@@ -1,4 +1,5 @@
 <template>
+  <NotifBar/>
   <router-view/>
 </template>
 
@@ -10,6 +11,7 @@ export default {
   }
 }
 </script>
+
 
 <style>
 #app {

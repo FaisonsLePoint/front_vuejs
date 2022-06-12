@@ -5,7 +5,9 @@ export default createStore({
     users: [
       { id:0, name: 'marcel' },
       { id:1, name: 'roger' }
-    ]
+    ],
+    notifDisplay: false,
+    notifMessage: ''
   },
   getters: {
     getMarcel(state){
@@ -14,11 +16,21 @@ export default createStore({
     //getUser(state, id)
     getUser: (state) => (id) => {
       return state.users[id].name
+    },
+    getNotif: (state) => {
+      return state.notifDisplay
+    },
+    getNotifMessage: (state) => {
+      return state.notifMessage
     }
   },
   mutations: {
     changeMarcel(state, payload){
       state.users[0].name = payload.name
+    },
+    displayNotif(state, payload){
+      state.notifDisplay = payload.d
+      state.notifMessage = payload.mes
     }
   },
   actions: {
